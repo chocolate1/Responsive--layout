@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>响应式布局</title>
+        <meta name="viewport"content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+        <meta name="format-detection" content="telephone=no,email=no"/>
+        <link rel="stylesheet" type="text/css" href="css/mo2.css"/>
+        <style type="text/css">
+ *{
+        margin: 0px;
+        padding: 0px;
+        font-family: "微软雅黑";
+}
+html{
+    font-style: 16px;
+}
+a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    z-index:0;
+}
+a:hover:before{
+    transform: scaleY(1);
+    transition: all 2s;
+}
+a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: .6;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    z-index: -1;
+}
+#head ul{
+    width: 100%;
+    height: 100px;
+}
+#head ul li{
+    width: 20%;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+}
+.pic img,.right_img img,.left_vedio{
+    display: block;
+    max-width: 100%;
+}
+li:nth-child(1){
+      background-color: #dda0dd;
+
+    }
+ li:nth-child(2){
+      background-color: #cffcff;
+
+    }
+ li:nth-child(3){
+      background-color: #ffe4e6;
+    }
+li:nth-child(4){
+      background-color: #c1ff3e;
+    }
+li:nth-child(5){
+      background-color: #eecbad;
+    }
+#main{
+    height: auto;
+    overflow: hidden;
+}
+.left,.right{
+    height: 400px;
+    float: left;
+    width: 50%;
+    background-color: #EE8262;
+    font-size: 1.2rem;
+    overflow: hidden;
+    color: #fff;
+    text-indent: 2em;
+    
+}
+.left_text,.left_vedio{
+    display: block;
+    padding-top: 20px;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+}
+.left_vedio{
+    width: 100%;
+    display: block;
+
+}
+.right_text,.right_img{
+    padding-top: 20px;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+}
+.right_img{
+    display: block;
+    width: 100%;
+}
+@media only screen and (max-width: 1440px) {
+    #head, #main{
+    width: 100%;
+    font-size: 1.2rem;
+    }
+    .left_text,.left_vedio{
+    display: block;
+    padding-top: 20px;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+}
+.right_text,.right_img{
+    padding-top: 20px;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+}
+}
+@media only screen and (max-width: 1340px) {
+    .right,.left{
+        width: 100%;
+        height: 400px;
+        background-color: orange;
+        font-size: 1rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #fff;
+    }
+
+}
+@media only screen and (max-width: 640px) {
+      #head ul{
+        width: auto;
+        height: 250px;
+    }
+   #head ul  li{
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+    }
+    .left,.right{
+        width: 100%;
+        display: block;
+        height: 500px;
+        background-color: pink;
+        font-size: .9rem;
+        padding-bottom: 1%;
+        border-bottom: 1px solid #fff;
+    }
+    .left_text,.left_vedio,.right_text,.right_img{
+    padding-top: 20px;
+    width: 100%;
+    }
+}
+        </style>
+    </head>
+    <body>
+        <div>
+            <header id="head">
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">新闻中心</a></li>
+                    <li><a href="#">产品展示</a></li>
+                    <li><a href="#">关于我们</a></li>
+      </ul>
+            </header>
+             <div class="pic">
+             <img src="./xy_img/banner.jpg">
+             </div>
+            <section id="main">
+
+                <div class="left">
+                    <div class="left_text">
+                        <p>关于我们</p>
+                       <p> 北京传习科技有限公司是隶属于传习教育集团，是一家专业从事软件开发应用服务和IT人才外包服务的
+          高科技公司。传习教育集团是在中科院计算所网络研究室的基础上组建和发展起来的，聚集多位中科院专家，
+          逐步完善发展的教育集团。旗下有中科天地教育、中科金天地网络、北京福智达软件、北京传习科技、
+          嘉悦传媒等多家公司。北京传习科技有限公司是一家专业从事软件开发应用服务和IT人才外包服务的高科技公司，
+          专注于人才整合与企业服务的融合。涉及技术研发、人才输出、服务外包等业务板块。
+          分别已在上海、杭州、深圳、西安、成都、香港、日本、新加坡等地设置了分支机构和合作单位。
+                        </p>
+                    </div>
+                    <div class="left_vedio">
+                        <video  >
+                        <source src="./xy_img/movie.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right_text">
+      <p>新闻中心</p>
+      <p>
+        新闻中心，是发布消息并为记者提供服务的机构，
+        有常设的和临时的两种.除作为记者招待会和新闻发布会的场所外，
+        还为记者提供新闻公报、背景资料、图表、照片、手册、指南、声像材料，
+        以及打字、洗印、同声传译、电视、收音、复印、电话、用户电传、传真等设备，
+        并为记者安排采访、旅行、食宿等。大多数新闻中心设有会议厅、工作间、图书馆、咖啡店和餐厅，
+        有些还附设旅馆或公寓。一些大型机构如联合国新闻中心，还抄收各大通讯社电讯供记者参阅。
+        有些还出租电视、摄影、录音等设备,并提供技术人员。
+      </p>
+      </div>
+      <div class="right_img">
+        <img src="./xy_img/pica.png" alt="">
+      </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
